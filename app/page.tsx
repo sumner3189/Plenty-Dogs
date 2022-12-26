@@ -3,44 +3,27 @@ import Link from 'next/link';
 
 export default function Page() {
   return (
-    <div className="space-y-6">
-      <div className="space-y-8 text-white">
-        {demos
-          .filter((section) =>
-            section.items.some((x) => typeof x.isDisabled === 'undefined'),
-          )
-          .map((section) => {
-            return (
-              <div key={section.name} className="space-y-3">
-                <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
-                  {section.name}
-                </div>
-
-                <div className="grid grid-cols-2 gap-5">
-                  {section.items
-                    .filter((item) => !item.isDisabled)
-                    .map((item) => {
-                      return (
-                        <Link
-                          href={`/${item.slug}`}
-                          key={item.name}
-                          className="block space-y-1.5 rounded-lg border border-white/10 px-4 py-3 hover:border-white/20"
-                        >
-                          <div>{item.name}</div>
-
-                          {item.description ? (
-                            <div className="line-clamp-3 text-sm text-zinc-400">
-                              {item.description}
-                            </div>
-                          ) : null}
-                        </Link>
-                      );
-                    })}
-                </div>
-              </div>
-            );
-          })}
+    <div>
+      <div
+        className="flex h-screen justify-center bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${'https://picsum.photos/id/237/600/400'})`,
+        }}
+      >
+        <div className=" flex h-full w-full items-center justify-center">
+          <div className="px-4 py-2 text-center text-white">
+            <h1 className="text-4xl font-bold">Welcome to my portfolio</h1>
+            <p className="text-xl font-light">
+              I'm a software developer specializing in web development.
+            </p>
+            <button className="mt-4 rounded border border-blue-700 bg-transparent py-2 px-4 font-semibold text-white hover:border-transparent hover:bg-blue-700 hover:text-white">
+              Learn more
+            </button>
+          </div>
+        </div>
       </div>
+      <h1>hi</h1>
+      <p>thest</p>
     </div>
   );
 }
