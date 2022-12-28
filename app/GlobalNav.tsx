@@ -18,6 +18,8 @@ export default function GlobalNav() {
         <li className="mr-6">
           <Link href="/discover">Discover</Link>
         </li>
+        <li className="mr-6">
+          <Link href="/search">Search</Link></li>
       </ul>
     </nav>
   );
