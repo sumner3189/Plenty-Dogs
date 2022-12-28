@@ -16,7 +16,7 @@ export default function GlobalNav() {
           <Link href="/about">About</Link>
         </li>
         <li className="mr-6">
-          <Link href="/projects">Projects</Link>
+          <Link href="/discover">Discover</Link>
         </li>
       </ul>
     </nav>
