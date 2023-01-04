@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+  'use client';
+  import React, { useState } from 'react';
 export default function Page() {
   const [inputValue, setInputValue] = useState();
   const [dogData, setDogData] = useState<any>(null);
